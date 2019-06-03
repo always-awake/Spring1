@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import ems.member.DataBaseConnectionInfo;
 import ems.member.service.EMSInformationService;
 
+
 @Configuration
 public class MemberConfig3 {
 

@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 import ems.member.DataBaseConnectionInfo;
 
+// 데이터베이스와 관련된 Bean 객체를 관리하는 자바 설정 파일
 @Configuration
 public class MemberConfig2 {
 

@@ -10,6 +10,7 @@ import ems.member.service.StudentModifyService;
 import ems.member.service.StudentRegisterService;
 import ems.member.service.StudentSelectService;
 
+// Dao와 Service Bean 객체들을 관리하는 자바 설정 파일
 @Configuration
 public class MemberConfig1 {
 
