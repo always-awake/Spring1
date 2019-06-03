@@ -1,8 +1,42 @@
-package Pj1;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-public class TransportationWalk {
+import com.word.WordSet;
+import com.word.dao.WordDao;
 
-    public void move() {
-        System.out.println("도보로 이동합니다.");
+public class WordSearchServiceUseAutowired {
+
+    @Autowired
+//	@Qualifier("usedDao")
+    private WordDao wordDao;
+
+    public WordSearchServiceUseAutowired() {
+        // TODO Auto-generated constructor stub
     }
+
+    //	@Autowired
+    public WordSearchServiceUseAutowired(WordDao wordDao) {
+        this.wordDao = wordDao;
+    }
+
+    public WordSet searchWord(String wordKey) {
+        if(verify(wordKey)) {
+            return wordDao.select(wordKey);
+        } else {
+            System.out.println("WordKey information is available.");
+        }
+
+        return null;
+    }
+
+    public boolean verify(String wordKey){
+        WordSet wordSet = wordDao.select(wordKey);
+        return wordSet != null ? true : false;
+    }
+
+    //	@Autowired
+    public void setWordDao(WordDao wordDao) {
+        this.wordDao = wordDao;
+    }
+
 }
