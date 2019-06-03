@@ -10,7 +10,9 @@ public class MemberSearchService {
 	@Autowired
 	private MemberDao memberDao;
 	
-	public MemberSearchService() { }
+	public MemberSearchService() {
+		System.out.println("MemberSearchService 생성자");
+	}
 	
 	public Member searchMember(String mId) {
 		return memberDao.select(mId);

@@ -4,11 +4,13 @@ import com.brms.member.Member;
 
 public class Book {
 
+	// Book 프로퍼티
 	private String bNum;
 	private String bTitle;
 	private boolean bCanRental;
 	private Member bMember;
-	
+
+	// 생성자
 	public Book(String bNum, String bTitle, boolean bCanRental, Member bMember) {
 		this.bNum = bNum;
 		this.bTitle = bTitle;
@@ -16,6 +18,7 @@ public class Book {
 		this.bMember = bMember;
 	}
 
+	// 프로퍼티에 대한 getter, setter
 	public String getbNum() {
 		return bNum;
 	}

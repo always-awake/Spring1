@@ -8,8 +8,11 @@ import com.brms.member.Member;
 public class MemberDao {
 
 	
-	private Map<String, Member> memberDB = 
-			new HashMap<String, Member>();
+	private Map<String, Member> memberDB = new HashMap<String, Member>();
+
+	public MemberDao() {
+		System.out.println("MemberDao 생성자");
+	}
 	
 	public void insert(Member member) {
 		memberDB.put(member.getmId(), member);

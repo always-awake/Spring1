@@ -9,18 +9,21 @@ public class BookRegisterService {
 
 	@Autowired
 	private BookDao bookDao;
-	
-	public BookRegisterService() { }
+
+	// 프로퍼티에 @Autowired 어노테이션이 있기 때문에 디폴트 생성자를 명시해준다.
+	public BookRegisterService() {
+		System.out.println("BookRegisterService 생성자");
+	}
 	
 	public void register(Book book) {
 		bookDao.insert(book);
 	}
 	
 	public void initMethod() {
-		System.out.println("BookRegisterService 빈(Bean)객체 생성 단계");
+		System.out.println("BookRegisterService initMethod()");
 	}
 	
 	public void destroyMethod() {
-		System.out.println("BookRegisterService 빈(Bean)객체 소멸 단계");
+		System.out.println("BookRegisterService destroyMethod()");
 	}
 }

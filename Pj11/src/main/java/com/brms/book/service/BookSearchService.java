@@ -10,7 +10,10 @@ public class BookSearchService {
 	@Autowired
 	private BookDao bookDao;
 	
-	public BookSearchService() { }
+	public BookSearchService() {
+		System.out.println("BookSearchService 생성자");
+
+	}
 	
 	public Book searchBook(String bNum) {
 		Book book = bookDao.select(bNum);

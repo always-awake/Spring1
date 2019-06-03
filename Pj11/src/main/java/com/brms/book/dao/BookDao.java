@@ -12,6 +12,10 @@ import com.brms.book.Book;
 public class BookDao implements InitializingBean, DisposableBean {
 
 	private Map<String, Book> bookDB = new HashMap<String, Book>();
+
+	public BookDao() {
+		System.out.println("BookDao 생성자");
+	}
 	
 	public void insert(Book book) {
 		bookDB.put(book.getbNum(), book);
@@ -34,12 +38,12 @@ public class BookDao implements InitializingBean, DisposableBean {
 	}
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("빈(Bean)객체 생성 단계");
+		System.out.println("BookDao afterPropertiesSet()");
 	}
 
 	@Override
 	public void destroy() throws Exception {
-		System.out.println("빈(Bean)객체 소멸 단계");
+		System.out.println("BookDao destroy()");
 	}
 	
 }

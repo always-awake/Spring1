@@ -10,7 +10,9 @@ public class MemberRegisterService {
 	@Autowired
 	private MemberDao memberDao;
 	
-	public MemberRegisterService() { }
+	public MemberRegisterService() {
+		System.out.println("MemberRegisterService 생성자");
+	}
 	
 	public void register(Member member) {
 		memberDao.insert(member);
